@@ -4,6 +4,7 @@ import crc81wire from './crc81wire';
 import crc16 from './crc16';
 import crc16ccitt from './crc16ccitt';
 import crc16modbus from './crc16modbus';
+import crc16mcrf4xx from './crc16mcrf4xx';
 import crc16xmodem from './crc16xmodem';
 import crc16kermit from './crc16kermit';
 import crc24 from './crc24';
@@ -16,6 +17,7 @@ export { crc81wire };
 export { crc16 };
 export { crc16ccitt };
 export { crc16modbus };
+export { crc16mcrf4xx };
 export { crc16xmodem };
 export { crc16kermit };
 export { crc24 };
@@ -29,6 +31,7 @@ export default {
   crc16,
   crc16ccitt,
   crc16modbus,
+  crc16mcrf4xx,
   crc16xmodem,
   crc16kermit,
   crc24,
