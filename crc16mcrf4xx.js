@@ -45,8 +45,9 @@ const crc16mcrf4xx = defineCrc('crc-16-mcrf4xx', function(buf, previous) {
   let crc = typeof previous !== 'undefined' ? ~~previous : 0xffff;
 
   for (let index = 0; index < buf.length; index++) {
-    const byte = buf[index];
-    crc = (TABLE[(crc ^ byte) & 0xff] ^ (crc >> 8)) & 0xffff;
+    var byte = buf[index];
+	  //crc = (TABLE[(crc ^ byte) & 0xff] ^ crc >> 8) & 0xffff;
+	  crc = (crc>>8) ^ TABLE[(crc ^ byte) & 0xff] ;
   }
 
   return crc;
